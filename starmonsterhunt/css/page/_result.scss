@@ -1,0 +1,81 @@
+@charset "UTF-8";
+.result {
+  border: 1px $debug-color dashed;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+
+  h2{
+    font-size: 1.4rem;
+    color: #01315a;
+  }
+  h3{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #01315a;
+    margin: 20px 0 10px 0;
+  }
+  .area{
+    background: #f8f8f8;
+    padding: 10px;
+  }
+  .rule-checkbox {
+    font-size: 0.8rem;
+    #checkRule {
+      height: 1.0rem;
+      width: 2rem;
+      vertical-align: middle;
+    }
+  }
+  .child{
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 10px 0 20px 0;
+
+    &.child4{
+      border-bottom: none;
+    }
+  }
+
+}
+
+
+@media (min-width: 992px) {
+  .result {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    h2{
+      font-size: 1.8rem;
+      color: #01315a;
+    }
+    h3{
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #01315a;
+      margin: 20px 0 10px 0;
+    }
+    .area{
+      background: #f8f8f8;
+      padding: 20px;
+    }
+    .rule-checkbox {
+      font-size: 1.2rem;
+      #checkRule {
+        height: 1.4rem;
+        width: 3rem;
+        vertical-align: middle;
+      }
+    }
+    .child{
+      display: inline-block;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      padding: 10px 0 20px 0;
+
+      &.child4{
+        border-bottom: none;
+      }
+    }
+  }
+}

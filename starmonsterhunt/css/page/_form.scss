@@ -1,0 +1,142 @@
+@charset "UTF-8";
+.form {
+  padding: 20px 0;
+  background: #FFF;
+  color: #01315a;
+  .title{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #01315a;
+  }
+  .subtitle{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #f29b00;
+    margin-bottom: 25px;
+  }
+  p{
+    font-size: 1.15rem;
+  }
+  .h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  select{
+    width: 200px;
+  }
+
+  .form-title{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    border-radius: 30px;
+    background: #ffd940;
+    display: inline-block;
+    padding: 1px 15px 3px 15px;
+  }
+  .form-control-label{
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 37px;
+  }
+  .form-control{
+    border-radius: 0;
+    border-color: #085e97;
+    background: #2493cb;
+    color: #FFF;
+  }
+  .child-title{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    border-radius: 30px;
+    color: #01315a;
+    background: #c9ece8;
+    display: block;
+    padding: 1px 15px 3px 15px;
+
+    .fa{
+      padding-top: 6px;
+      padding-left: 6px;
+
+      &.collapsed{
+        &:before{
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  .form {
+    background: transparent;
+    .title{
+      font-size: 2rem;
+      font-weight: bold;
+      color: #01315a;
+    }
+    .subtitle{
+      font-size: 2rem;
+      font-weight: bold;
+      color: #f29b00;
+      margin-bottom: 25px;
+    }
+    p{
+      font-size: 1.15rem;
+    }
+    .h2{
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    select{
+      width: 200px;
+    }
+
+    .form-title{
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 20px 0;
+      border-radius: 30px;
+      background: #ffd940;
+      display: inline-block;
+      padding: 1px 15px 3px 15px;
+    }
+    .form-control-label{
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 37px;
+    }
+    .form-control{
+      border-radius: 0;
+      border-color: #085e97;
+      background: #2493cb;
+      color: #FFF;
+    }
+    .child-title{
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 20px 0;
+      border-radius: 30px;
+      color: #01315a;
+      background: #c9ece8;
+      display: block;
+      padding: 1px 15px 3px 15px;
+
+      .fa{
+        padding-top: 6px;
+        padding-left: 6px;
+
+        &.collapsed{
+          &:before{
+            content: "";
+          }
+        }
+      }
+    }
+    .box{
+      padding: 50px;
+    }
+  }
+}

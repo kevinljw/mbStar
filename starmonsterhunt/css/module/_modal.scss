@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.modal {
+  .modal-content {
+    background: #FFF;
+    border: 3px solid #b9dfec;
+    border-radius: 10px;
+    padding: 30px;
+
+    .modal-header{
+      border-bottom: none;
+    }
+
+    .close {
+      position: absolute;
+      font-size: 40px;
+      color: #13569a;
+      top: 15px;
+      right: 15px;
+      opacity: 0.8;
+      z-index: 10;
+      &:hover {
+        color: #082b50;
+      }
+    }
+    h2{
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #13465b;
+    }
+
+
+  }
+
+
+}

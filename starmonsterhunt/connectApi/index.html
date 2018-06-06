@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+<ul>
+
+    <p>偏好活動場次時間(會依照簡訊通知活動實際場次，主辦單位保留最終修改權利。)</p>
+    <select name="Session">
+        　<option value="A">10:00-13:00</option>
+        　<option value="B">13:00-16:00</option>
+        　<option value="C">16:00-19:00</option>
+    </select>
+    <p></p>
+    <li>車主資料</li>
+    <li>*中文姓名:</li><input type="text" id="A1Name"><br>
+    <li>*性別:</li><input type="radio" value="male" name="A1Sex"> 男 <input type="radio" value="female" name="A1Sex"> 女 <br>
+    <li>*聯絡電話:</li><input type="tel" id="A1Phone"  onchange="checkPhone(this)"/>
+    <li>*電子信箱: </li><input type="text" id="A1Email"  onchange="checkEmail(this)"/><br>
+    <li>*身分證字號:</li><input type="text" id="A1ID "  onchange="checkID(this)"/><br>
+    <li>*底盤編號:</li> <input type="text" id="CarNum" class="idN" onchange="checkCarNum(this)"/>
+    <li>*出生年月日:</li><input type="date" id="A1Bday " value="2016-01-13" onchange="checkDate(this)"/>
+    <p></p>
+    <li>共同參加成人  (若無可略過填寫)</li>
+    <li>*中文姓名:</li><input type="text" id="A2Name"><br>
+    <li>*性別:</li><input type="radio" value="male" name="A2Sex"> 男 <input type="radio" value="female" name="A2Sex"> 女 <br>
+    <li>*聯絡電話:</li><input type="text" id="A2Phone"  onchange="checkPhone(this)"/>
+    <li>*電子信箱: </li><input type="text" id="A2Email"  onchange="checkEmail(this)"/><br>
+    <li>*身分證字號:</li><input type="text" id="A2ID "  onchange="checkID(this)"/><br>
+    <li>*出生年月日:</li><input type="date" id="A2Bday " value="2016-01-13" onchange="checkDate(this)"/>
+    <p></p>
+    <p>參與活動孩童(1)</p>
+    <li>*中文姓名:</li><input type="text" id="C1Name"><br>
+    <li>*性別:</li><input type="radio" value="male" name="C1Sex"> 男 <input type="radio" value="female" name="C1Sex"> 女 <br>
+    <li>*出生年月日:</li><input type="date" id="C1Bday " value="2016-01-13"/>
+    <li>*身分證字號:</li><input type="text" id="C1ID" class="idN" onchange="checkID()"/><br>(10位英數字)
+    <p></p>
+    <p>參與活動孩童(2)</p>
+    <li>*中文姓名:</li><input type="text" id="C2Name"><br>
+    <li>*性別:</li><input type="radio" value="male" name="C2Sex"> 男 <input type="radio" value="female" name="C2Sex"> 女 <br>
+    <li>*出生年月日:</li><input type="date" id="C2Bday " value="2016-01-13"/>
+    <li>*身分證字號:</li><input type="text" id="C2ID" class="idN" onchange="checkID()"/><br>(10位英數字)
+    <p></p>
+    <p>參與活動孩童(3)</p>
+    <li>*中文姓名:</li><input type="text" id="C3Name"><br>
+    <li>*性別:</li><input type="radio" value="male" name="C3Sex"> 男 <input type="radio" value="female" name="C3Sex"> 女 <br>
+    <li>*出生年月日:</li><input type="date" id="C3Bday " value="2016-01-13"/>
+    <li>*身分證字號:</li><input type="text" id="C3ID" class="idN" onchange="checkID()"/><br>(10位英數字)
+    <p></p>
+    <p>參與活動孩童(4)</p>
+    <li>*中文姓名:</li><input type="text" id="C4Name"><br>
+    <li>*性別:</li><input type="radio" value="male" name="C4Sex"> 男 <input type="radio" value="female" name="C4Sex"> 女 <br>
+    <li>*出生年月日:</li><input type="date" id="C4Bday " value="2016-01-13"/>
+    <li>*身分證字號:</li><input type="text" id="C4ID" class="idN" onchange="checkID()"/><br>(10位英數字)
+</ul>
+
+<input type="submit" id="SB" value="送出表單">
+
+<script src="lib/jquery-1.11.0.min.js"></script>
+<script src="lib/TweenMax.min.js"></script>
+<script src="lib/checkInfo.js"></script>
+<script src="lib/dvMain.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+//-Other Sass Framework, Vendor主要的用途是用來整合第三方的plugin與 Framework 用的
+
+@import "vendor/bootstrap";                   //vendors/_bootstrap -Sass Framework
+@import "vendor/font-awesome";                //vendors/_font-awesome -Sass Framework
+//@import "vendor/owl.carousel";                //vendors/_owl-carousel -Sass Framework
+@import "vendor/bootstrap-datepicker";            //vendors/_bootstrap-slider -Sass Framework
+
+//@import "vendor/bootstrap-slider";            //vendors/_bootstrap-slider -Sass Framework
+//@import "vendor/magnificent";                //vendors/_magnificent -Sass Framework
+

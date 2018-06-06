@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+//$font-family-base: 'PingFangTC', 'Heiti TC', 'Microsoft JhengHei', 'Arial', 'sans-serif';
+$font-family-base: 'Coporate S Light','華康黑體','arial','helvetica','verdana','times new roman','sans-serif';
+
+body,
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-family-base;
+}
+
+h1{ font-size: 20px; line-height: 1.5; }
+h2{ font-size: 16px; line-height: 1.5; }
+h3{ font-size: 15px; line-height: 1.5; }
+h4{ font-size: 14px; line-height: 1.5; }
+ p{ font-size: 14px; line-height: 1.5; }
+
+button:focus,
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+
+
+//$debug-color: #EE0000;
+$debug-color: transparent;

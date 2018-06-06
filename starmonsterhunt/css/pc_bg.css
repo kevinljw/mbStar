@@ -1,0 +1,212 @@
+.bg-pc {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1920px;
+    height: 100%;
+    margin-left: -960px;
+}
+
+.skyArea {
+    position: absolute;
+    top: 0;
+    width: 1920px;
+    height: 510px;
+    background-color: #fff;
+}
+
+.cloud0_stay {
+    position: absolute;
+    top: -20px;
+    left: 120px;
+    /*left: 1920px;*/
+    opacity: 0;
+}
+
+.cloud1_stay {
+    position: absolute;
+    top: 60px;
+    left: 1440px;
+    opacity: 0;
+}
+
+.cloud0 {
+    position: absolute;
+    top: -20px;
+    /*left: 120px;*/
+    left: 1920px;
+}
+
+.cloud1 {
+    position: absolute;
+    top: 20px;
+    /*left: 540px;*/
+    left: 1920px;
+}
+
+.cloud2 {
+    position: absolute;
+    top: 345px;
+    /*left: 840px;*/
+    left: 2520px;
+    transform: scale(0.7) rotate(180deg);
+}
+
+.cloud3 {
+    position: absolute;
+    top: 80px;
+    /*right: 220px;*/
+    left: 2220px;
+    transform: scale(0.7);
+}
+
+.inland_top {
+    position: absolute;
+    top: 438px;
+    left: 30px;
+}
+
+.seaArea {
+    position: absolute;
+    top: 510px;
+    width: 1920px;
+    height: calc(100% - 510px);
+    background-color: #2493cc;
+}
+
+.wave0 {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.wave1 {
+    position: absolute;
+    top: 280px;
+    left: 0;
+}
+
+.wave2 {
+    position: absolute;
+    top: 950px;
+    right: -30px;
+}
+
+.wave3 {
+    position: absolute;
+    top: 1090px;
+    left: 0;
+}
+
+.wave4 {
+    position: absolute;
+    top: 1400px;
+    right: -280px;
+}
+
+.islandBg {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    width: 1920px;
+    height: auto;
+}
+
+.inland_text {
+    position: absolute;
+    top: 560px;
+    right: 150px;
+}
+
+.kvTitle {
+    position: absolute;
+    top: 50px;
+    left: 980px;
+    display: none;
+}
+
+.monster {
+    position: absolute;
+    top: 225px;
+    left: 540px;
+}
+
+.textPop {
+    position: absolute;
+    top: 150px;
+    left: 690px;
+}
+
+.cta {
+    position: absolute;
+    top: 248px;
+    left: 820px;
+}
+
+.wheel {
+    position: absolute;
+    top: 750px;
+    right: 810px;
+    width: 210px;
+    height: 234px;
+    overflow: hidden;
+}
+
+.waterFall {
+    position: absolute;
+    top: 540px;
+    left: 520px;
+    width: 290px;
+    height: 295px;
+    overflow: hidden;
+}
+
+.waterFall_s {
+    position: absolute;
+    top: 1236px;
+    left: 570px;
+    width: 260px;
+    height: 265px;
+    overflow: hidden;
+}
+
+.kvAni {
+    position: absolute;
+    top: 0;
+    left: 980px;
+    width: 500px;
+    height: 380px;
+    overflow: hidden;
+}
+
+.padBg_box {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    min-width: 720px;
+    min-height: 705px;
+}
+
+.kvAni_pad {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    height: 380px;
+    overflow: hidden;
+}
+
+.textPop_pad {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.cta_pad {
+    position: absolute;
+    top: 500px;
+    left: 50%;
+    margin-left: 110px;
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+.map {
+  padding: 25px 0;
+  background: #4cb232;
+  h2{
+    color: #1c313a;
+    font-size: 1.1rem;
+    font-weight: bold;
+    span{
+      font-weight: normal;
+      color: #13465b;
+    }
+  }
+  p{
+    font-size: 1.0rem;
+    color: #1a485b;
+  }
+
+  iframe{
+    height: auto;
+  }
+}
+
+
+@media (min-width: 992px) {
+  .map {
+    background: transparent;
+    width: 100%;
+
+    .box{
+      background: #acd032;
+      border-color: #acd032;
+    }
+
+    iframe{
+      height: 300px;
+      margin: 20px 0;
+    }
+    
+  }
+}

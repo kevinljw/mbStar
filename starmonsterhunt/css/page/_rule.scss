@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.rule {
+  background: #acd032;
+  padding: 20px 0;
+  .content{
+    .title{
+      color: #134659;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p{
+      color: #000;
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  .rule {
+    border: 1px $debug-color dashed;
+    background: transparent;
+    height: 495px;
+    width: 100%;
+    padding: 40px 0;
+
+    .content{
+      padding: 45px 0 0 25px;
+      .title{
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+}

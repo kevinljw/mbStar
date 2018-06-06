@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+.popup-contact-us{
+
+  .modal-content{
+    background: transparent;
+    border: none;
+
+    .modal-header{
+      border: none;
+      margin-top: 42px;
+      padding: 0 0 5px 0;
+
+      .close {
+        opacity: 1;
+      }
+    }
+
+    .modal-body {
+      position: relative;
+      background: #000;
+      color: #FFF;
+      border-right: 1px solid #debd6a;
+      border-left: 1px solid #ba7a1c;
+      font-size: 13px;
+      margin-bottom: 15vh;
+
+      &:before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(120deg, #debd6a, #ba7a1c);
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(120deg, #debd6a, #ba7a1c)
+      }
+
+      .title {
+        color: #ceb07d;
+      }
+
+      p {
+        font-size: 15px;
+      }
+      a {
+        color: #FFF;
+        text-decoration: underline;
+      }
+      hr {
+        background: #ceb07d;
+      }
+
+      //form
+      .form {
+        margin-bottom: 0;
+
+        .col-xs, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        .form-group {
+          height: auto;
+        }
+        .form-control {
+          font-size: 15px;
+          color: #ceb07d;
+          background: #2a2216;
+          border: none;
+          border-radius: 0;
+          height: 30px;
+        }
+
+        select.form-control {
+          padding: 0 6px;
+          background: rgba(0, 0, 0, 0.0);
+          border: 1px solid #ceb07d;
+          color: #ceb07d;
+          height: 29px;
+          option {
+            font-size: 15px;
+            font-family: $font-family-base;
+            background: rgba(0, 0, 0, 0.9);
+          }
+        }
+
+        textarea.form-control {
+          height: auto;
+        }
+
+        .form-control-label {
+          height: 30px;
+          font-size: 15px;
+          line-height: 32px;
+          color: #fff;
+        }
+
+        label {
+          height: 30px;
+          font-size: 15px;
+          line-height: 32px;
+          color: #fff;
+
+          a {
+            color: #FFF;
+            text-decoration: underline;
+          }
+          [type="checkbox"] {
+            border: none;
+            background: #aa9269;
+          }
+        }
+        .v-code{
+          width: 80%;
+          height: 29px;
+          padding-top: 0;
+          display: inline-block;
+          margin-top: -8px;
+          border: 1px solid #2a2216;
+          background: #000;
+        }
+        .btn-reload{
+          display: inline-block;
+          color: #FFF;
+          background: #2a2216;
+          width: 20%;
+          height: 29px;
+          font-size: 20px;
+          text-align: center;
+          margin-top: 0;
+          padding-top: 2px;
+        }
+
+        .btn-submit {
+          font-size: 13px;
+          color: #FFF;
+          background: #69583a;
+          border: none;
+          border-radius: 0;
+          height: 30px;
+          width: 100%;
+          border: 1px solid #000;
+          text-decoration: none;
+
+          &:hover {
+            background: transparent;
+            border: 1px solid #ceb07d;
+            color: #ceb07d;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
