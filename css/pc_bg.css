@@ -210,3 +210,7 @@
     left: 50%;
     margin-left: 110px;
 }
+.spansmall span{
+    font-size: 0.75em;
+    color: #13465b;
+}
