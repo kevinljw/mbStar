@@ -206,8 +206,11 @@
 
 .cta_pad {
     position: absolute;
+/*
     top: 500px;
     left: 50%;
+*/
+    top: 50%;
     margin-left: 110px;
 }
 

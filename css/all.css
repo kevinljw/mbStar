@@ -8031,9 +8031,9 @@ header {
   .kv .btn-go {
     position: absolute;
     border: 1px dashed transparent;
-    top: 50%;
-    left: 50%;
-    width: 60%;
+    top: 600px;
+    left: 67%;
+    width: 40%;
     height: 30%;
     margin-left: -23%; }
 
@@ -8045,7 +8045,19 @@ header {
       left: 50%;
       margin-left: -395px;
       width: 360px;
-      height: 280px; } }
+      height: 185px; } }
+@media (max-width: 575px) {
+    .kv {
+        height: 545px; 
+    }
+    .kv .btn-go {
+        top: 73%;
+        left: 58%;
+        right: 85px;
+        height: 30%;
+        width: 36%;
+    } 
+}
 .rule {
   background: #acd032;
   padding: 20px 0; }
