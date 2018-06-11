@@ -1,5 +1,5 @@
 /**
- * Created by jMBP on 12/07/2017.
+ * Created by LJW.
  */
 function testing(target) {
     console.log(target.value);
@@ -10,11 +10,11 @@ function checkName(target) {
     var myName = target.value;
     for (var i = 0; i < myName.length; i++) {
         if (myName.charCodeAt(i) < 0x4E00 || myName.charCodeAt(i) > 0x9FA5) {
-            console.log("false");
+            // console.log("false");
             return false;
         }
         else {
-            console.log('true');
+            // console.log('true');
             return true;
         }
     }
@@ -113,16 +113,16 @@ function checkPhone(target) {
             v = parseInt(myNum.charAt(0));
             w = parseInt(myNum.charAt(1));
             if (v == 0 && w == 9) {
-                console.log('true');
+                // console.log('true');
                 return true;
             }
             else {
-                console.log('false');
+                // console.log('false');
                 return false;
             }
         }
         else {
-            console.log('false');
+            // console.log('false');
             return false;
         }
     }
@@ -531,10 +531,10 @@ function checkChild() {
     }
     if (checkBL == false) {
         alert("請完整填寫正確資訊");
-         return true;
+         // return true;
     }
     else {
-        console.log("goNext");
+        // console.log("goNext");
         return true;
     }
 }
