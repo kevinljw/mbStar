@@ -102,6 +102,7 @@ function writeResult() {
     
     //form val
     
+    $('#_session').val($('.Sessions').text());
     $('#_A1Name').val(ab0[0]);
     $('#_A1Sex').val(ab1[0]);
     $('#_A1Phone').val(ab2[0]);
@@ -117,23 +118,42 @@ function writeResult() {
     $('#_A2Phone').val(ab9[0]);
     $('#_A2Email').val(ab10[0]);
     $('#_A2ID').val(ab11[0]);
-    $('#_A2Bday').val(ab12[0]);
+    $('#_A2BdayY').val(ab12[0].split("/")[0]);
+    $('#_A2BdayM').val(ab12[0].split("/")[1]);
+    $('#_A2BdayD').val(ab12[0].split("/")[2]);
+    
     $('#_C1Name').val(ab13[0]);
-    $('#_C1Sex').val(ab14[0]);
-    $('#_C1ID').val(ab15[0]);
-    $('#_C1Bday').val(ab16[0]);
     $('#_C2Name').val(ab17[0]);
-    $('#_C2Sex').val(ab18[0]);
-    $('#_C2ID').val(ab19[0]);
-    $('#_C2Bday').val(ab20[0]);
     $('#_C3Name').val(ab21[0]);
-    $('#_C3Sex').val(ab22[0]);
-    $('#_C3ID').val(ab23[0]);
-    $('#_C3Bday').val(ab24[0]);
     $('#_C4Name').val(ab25[0]);
+    
+    $('#_C1Sex').val(ab14[0]);
+    $('#_C2Sex').val(ab18[0]);
+    $('#_C3Sex').val(ab22[0]);
     $('#_C4Sex').val(ab26[0]);
+    
+    $('#_C1ID').val(ab15[0]);
+    $('#_C2ID').val(ab19[0]);
+    $('#_C3ID').val(ab23[0]);
     $('#_C4ID').val(ab27[0]);
-    $('#_C4Bday').val(ab28[0]);
+    
+    
+    $('#_C1BdayY').val(ab16[0].split("/")[0]);
+    $('#_C1BdayM').val(ab16[0].split("/")[1]);
+    $('#_C1BdayD').val(ab16[0].split("/")[2]);
+    
+    $('#_C2BdayY').val(ab20[0].split("/")[0]);
+    $('#_C2BdayM').val(ab20[0].split("/")[1]);
+    $('#_C2BdayD').val(ab20[0].split("/")[2]);
+    
+    $('#_C3BdayY').val(ab24[0].split("/")[0]);
+    $('#_C3BdayM').val(ab24[0].split("/")[1]);
+    $('#_C3BdayD').val(ab24[0].split("/")[2]);
+    
+    $('#_C4BdayY').val(ab28[0].split("/")[0]);
+    $('#_C4BdayM').val(ab28[0].split("/")[1]);
+    $('#_C4BdayD').val(ab28[0].split("/")[2]);
+    
 
     console.log("child"+cd1+cd2+cd3);
     $('.ad01').show();
