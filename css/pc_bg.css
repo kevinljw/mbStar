@@ -226,3 +226,11 @@
 .box{
     padding: 5px 30px 30px 30px;
 }
+
+#SessionPlace{
+    width: 255px;
+}
+
+#SessionTime{
+    width: 255px;
+}
