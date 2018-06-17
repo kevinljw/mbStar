@@ -1,7 +1,7 @@
 /**
  * Created by LJW.
  */
-var ss = "A";
+//var ss = "A";
 var ab0 = ["", false];
 var ab1 = ["", false];
 var ab2 = ["", false];
@@ -32,6 +32,8 @@ var ab26 = ["", false];
 var ab27 = ["", false];
 var ab28 = ["", false];
 
+var rList = [];
+
 var ab = [ab0, ab1, ab2, ab3, ab4, ab5, ab6, ab7, ab8, ab9, ab10, ab11, ab12, ab13, ab14, ab15, ab16, ab17, ab18, ab19, ab20, ab21, ab22, ab23, ab24, ab25, ab26, ab27, ab28];
 
 var ad1=false;
@@ -43,6 +45,7 @@ $(function () {
     init();
     datePick();
     evt();
+    getRemains();
 });
 
 function init() {
@@ -53,22 +56,54 @@ function init() {
     $('#footer').show();
 
 }
-
+var isDebugMode = false;
+function getRemains(){
+    $.ajax({
+         url: (isDebugMode?'//localhost:3000':'//mbstarmonster.ml')+'/api/remains',
+        type: "GET",
+        dataType: "json",
+        jsonpCallback: "result",
+        success: result
+    });
+    function result(resJSON) {
+        // console.log('-----------');
+        console.log(resJSON);
+//        rList = resJSON;
+        resJSON.forEach(function(d){
+            rList[d.key]=d.value;
+        });
+        console.log(rList);
+        setSessionDropDown();
+    }
+}
+function setSessionDropDown(){
+    sp = $("#SessionPlace").find(":selected").val();
+    if(rList[sp]){
+//        console.log(sp, rList[sp]);
+        rList[sp].forEach(function(num,idx){
+//            console.log(num,idx);
+            $("#SessionTime>option:nth-child("+(idx+1)+")").text($("#SessionTime>option:nth-child("+(idx+1)+")").val()+" 剩餘"+num+"人");
+        })
+    }
+//    
+}
 function writeResult() {
 
 
-    if (ss == "A") {
-        $('.Sessions').html("10:00-13:00");
-
-    }
-    else if (ss == "B") {
-
-        $('.Sessions').html("13:00-16:00");
-    }
-    else {
-        $('.Sessions').html("16:00-19:00");
-
-    }
+//    if (ss == "A") {
+//        $('.Sessions').html("10:00-13:00");
+//
+//    }
+//    else if (ss == "B") {
+//
+//        $('.Sessions').html("13:00-16:00");
+//    }
+//    else {
+//        $('.Sessions').html("16:00-19:00");
+//
+//    }
+    $('.SessionTime').html($("#SessionTime").find(":selected").val());
+    $('.SessionPlace').html($("#SessionPlace").find(":selected").val());
     
     $('.A1Name').html(ab0[0]);
     $('.A1Sex').html(ab1[0]);
@@ -102,7 +137,8 @@ function writeResult() {
     
     //form val
     
-    $('#_session').val($('.Sessions').text());
+    $('#_sessionPlace').val($("#SessionPlace").find(":selected").val());
+    $('#_sessionTime').val($("#SessionTime").find(":selected").val());
     $('#_A1Name').val(ab0[0]);
     $('#_A1Sex').val(ab1[0]);
     $('#_A1Phone').val(ab2[0]);
@@ -194,6 +230,18 @@ function writeResult() {
     }
 
 }
+function isRemainingNum(){
+    var ss2 = parseInt($("#SessionTime").find(":selected").text().split("剩餘")[1]);
+    if(ss2<=0){
+        alert("名額已滿，請選擇其他時段");
+        return false;
+    }
+    else{
+        return true;
+    }
+    
+//        console.log(ss2);
+}
 function evt() {
     $('.btn-back').on('click', function () {
 
@@ -224,7 +272,30 @@ function evt() {
 
         if ($('#checkRule')[0].checked) {
 
-            sendInfo();
+            console.log($("#benzForm").serializeArray());
+//            sendInfo();
+            $.ajax({
+                url: (isDebugMode?'//localhost:3000':'//mbstarmonster.ml')+'/api/newPost',
+                type: "POST",
+                data: $("#benzForm").serializeArray(),
+                dataType: "json",
+                jsonpCallback: "result",
+                success: result
+            });
+            
+            
+            
+            function result(resJSON) {
+                console.log(resJSON);
+                if(resJSON.nModified){
+                    $("#benzForm").submit();
+                }
+                else{
+                    alert("名額已滿，請選擇其他時段");
+                }
+                
+            }
+            
             CallGaBtn('Send');
 
         }
@@ -263,9 +334,12 @@ function evt() {
         $('#form2').show();
     });
 
-    $("#Session").change(function () {
-        ss = $("#Session").find(":selected").val();
-        console.log(ss);
+    $("#SessionPlace").change(function () {
+        setSessionDropDown();        
+    });
+    $("#SessionTime").change(function () {
+        isRemainingNum();
+        
     });
     $("#A1Name").change(function () {
         ab0[0] = this.value;
@@ -334,30 +408,30 @@ function evt() {
         ab5[0] = this.value;
 
 
-        $.ajax({
-             url: '//www.mercedesgenuineparts.com.tw/api/starmonsterhuntcarnum.ashx',
+//        $.ajax({
+//             url: '//www.mercedesgenuineparts.com.tw/api/starmonsterhuntcarnum.ashx',
+//
+//            data: {
+//                CarNum: ab5[0],
+//            },
+//            type: "POST",
+//            dataType: "json",
+//            jsonpCallback: "result",
+//            success: result
+//        });
 
-            data: {
-                CarNum: ab5[0],
-            },
-            type: "POST",
-            dataType: "json",
-            jsonpCallback: "result",
-            success: result
-        });
-
-        function result(responseText) {
-            // console.log('-----------');
-            console.log(responseText);
-            if (responseText.succ == "Y") {
-                $("#CarNum").css("border-color", " #085e97");
-            } else {
-                alert(responseText.Msg);
-                ab5[1] = false;
-                $("#CarNum").css("border-color", "#f00");
-            }
-
-        }
+//        function result(responseText) {
+//            // console.log('-----------');
+//            console.log(responseText);
+//            if (responseText.succ == "Y") {
+//                $("#CarNum").css("border-color", " #085e97");
+//            } else {
+//                alert(responseText.Msg);
+//                ab5[1] = false;
+//                $("#CarNum").css("border-color", "#f00");
+//            }
+//
+//        }
 
 
         if (ab5[1] == true) {

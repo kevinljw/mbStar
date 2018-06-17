@@ -280,15 +280,19 @@ function checkAdult() {
     }
 
     console.log(checkC);
+    if(isRemainingNum()){
+        if (checkBoolean == false) {
+            // console.log("stop here");
+            alert("請完整填寫正確資訊");
+//             return true;
+        }
+        else {
 
-    if (checkBoolean == false) {
-        // console.log("stop here");
-        alert("請完整填寫正確資訊");
-         return true;
-    }
-    else {
-        console.log("goNext");
-        return true;
+            console.log("goNext");
+            return true;
+
+
+        }
     }
 }
 function checkChild() {
@@ -531,7 +535,7 @@ function checkChild() {
     }
     if (checkBL == false) {
         alert("請完整填寫正確資訊");
-         // return true;
+//        return true;
     }
     else {
         // console.log("goNext");
