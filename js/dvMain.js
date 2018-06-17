@@ -272,7 +272,7 @@ function evt() {
 
         if ($('#checkRule')[0].checked) {
 
-            console.log($("#benzForm").serializeArray());
+//            console.log($("#benzForm").serializeArray());
 //            sendInfo();
             $.ajax({
                 url: (isDebugMode?'//localhost:3000':'//mbstarmonster.ml')+'/api/newPost',
