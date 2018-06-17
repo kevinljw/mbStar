@@ -67,12 +67,12 @@ function getRemains(){
     });
     function result(resJSON) {
         // console.log('-----------');
-        console.log(resJSON);
+//        console.log(resJSON);
 //        rList = resJSON;
         resJSON.forEach(function(d){
             rList[d.key]=d.value;
         });
-        console.log(rList);
+//        console.log(rList);
         setSessionDropDown();
     }
 }
