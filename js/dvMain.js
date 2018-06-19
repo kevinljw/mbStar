@@ -271,7 +271,6 @@ function evt() {
     $('.btn-submit').on('click', function () {
 
         if ($('#checkRule')[0].checked) {
-
 //            console.log($("#benzForm").serializeArray());
 //            sendInfo();
             $.ajax({
@@ -281,9 +280,7 @@ function evt() {
                 dataType: "json",
                 jsonpCallback: "result",
                 success: result
-            });
-            
-            
+            });  
             
             function result(resJSON) {
                 console.log(resJSON);
