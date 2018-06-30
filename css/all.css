@@ -1654,7 +1654,7 @@ pre {
     border-color: #66afe9;
     outline: none; }
   .form-control::placeholder {
-    color: #999;
+    color: #fff;
     opacity: 1; }
   .form-control:disabled, .form-control[readonly] {
     background-color: #eceeef;
@@ -8323,5 +8323,18 @@ header {
         padding: 0.5rem 1rem; }
         .footer .container .btn img {
           height: auto; } }
+
+.btn-size{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.btn-img-size{
+    height: 30px;
+}
+
+.ma-7{
+    margin-bottom: 3px;
+}
 
 /*# sourceMappingURL=all.css.map */
