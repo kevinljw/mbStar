@@ -268,14 +268,14 @@ function evt() {
         }
 
     });
-    $('.btn-submit').on('click', function () {
+    $('.btn-submit').one('click', function () {
         
         if ($('#checkRule')[0].checked) {
 //            console.log($("#benzForm").serializeArray());
 //            sendInfo();
-            $('.btn-submit>img').attr("src","images/layout/btn_sendInfo_down.png");
-            $('.btn-submit').removeClass("btn-submit");
-            
+//            $('.btn-submit>img').attr("src","images/layout/btn_sendInfo_down.png");
+//            $('.btn-submit').removeClass("btn-submit");
+//            
             $.ajax({
                 url: (isDebugMode?'//localhost:3000':'//mbstarmonster.ml')+'/api/newPost',
                 type: "POST",
