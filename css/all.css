@@ -1872,8 +1872,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .form-inline .has-feedback .form-control-feedback {
     top: 0; } }
 
-.btn {
-  display: inline-block;
+.btn { 
+display: inline-block;
   font-weight: normal;
   line-height: 1.25;
   text-align: center;
@@ -1882,7 +1882,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   cursor: pointer;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.5rem 1rem;
+  padding: 0.1rem 0.5rem;
   font-size: 1rem;
   border-radius: 0.25rem; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
@@ -8037,6 +8037,10 @@ header {
     height: 30%;
     margin-left: -23%; }
 
+.btn-img-size{
+    height: 34px;
+}
+
 @media (min-width: 992px) {
   .kv {
     height: 545px; }
@@ -8045,7 +8049,13 @@ header {
       left: 50%;
       margin-left: -395px;
       width: 360px;
-      height: 185px; } }
+      height: 185px; 
+    }
+    .btn-img-size{
+        height: 25px;
+    }
+    
+}
 @media (max-width: 575px) {
     .kv {
         height: 545px; 
@@ -8057,6 +8067,10 @@ header {
         height: 30%;
         width: 36%;
     } 
+    .btn-img-size{
+        height: 30px;
+    }
+    
 }
 .rule {
   background: #acd032;
@@ -8329,9 +8343,7 @@ header {
     padding-bottom: 0px;
 }
 
-.btn-img-size{
-    height: 30px;
-}
+
 
 .ma-7{
     margin-bottom: 3px;
