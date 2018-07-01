@@ -232,7 +232,7 @@ function writeResult() {
 }
 function isRemainingNum(){
     var ss2 = parseInt($("#SessionTime").find(":selected").text().split("剩餘")[1]);
-    if(ss2<=0){
+    if(ss2<=1){
         alert("名額已滿，請選擇其他時段");
         return false;
     }
@@ -269,10 +269,13 @@ function evt() {
 
     });
     $('.btn-submit').on('click', function () {
-
+        
         if ($('#checkRule')[0].checked) {
 //            console.log($("#benzForm").serializeArray());
 //            sendInfo();
+            $('.btn-submit>img').attr("src","images/layout/btn_sendInfo_down.png");
+            $('.btn-submit').removeClass("btn-submit");
+            
             $.ajax({
                 url: (isDebugMode?'//localhost:3000':'//mbstarmonster.ml')+'/api/newPost',
                 type: "POST",
@@ -283,7 +286,7 @@ function evt() {
             });  
             
             function result(resJSON) {
-                console.log(resJSON);
+//                console.log(resJSON);
                 if(resJSON.nModified){
                     $("#benzForm").submit();
                 }
@@ -778,8 +781,8 @@ function datePick() {
         autoclose: true,
         todayHighlight: true,
         weekStart: 0,
-        startDate: "2004-01-01",
-        endDate: "2010-12-31"
+        startDate: "2000-01-01",
+        endDate: "2018-07-31"
     });
 }
 
