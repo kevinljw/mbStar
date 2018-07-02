@@ -82,6 +82,12 @@ function setSessionDropDown(){
 //        console.log(sp, rList[sp]);
         rList[sp].forEach(function(num,idx){
 //            console.log(num,idx);
+            if(num<3 && num>=1){
+                num = 3;
+            }
+            else if(num<0){
+                num = 0;
+            }
             $("#SessionTime>option:nth-child("+(idx+1)+")").text($("#SessionTime>option:nth-child("+(idx+1)+")").val()+" 剩餘"+num+"人");
         })
     }
@@ -232,7 +238,7 @@ function writeResult() {
 }
 function isRemainingNum(){
     var ss2 = parseInt($("#SessionTime").find(":selected").text().split("剩餘")[1]);
-    if(ss2<=1){
+    if(ss2<1){
         alert("名額已滿，請選擇其他時段");
         return false;
     }
