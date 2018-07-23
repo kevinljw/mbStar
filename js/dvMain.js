@@ -108,7 +108,12 @@ function writeResult() {
 //        $('.Sessions').html("16:00-19:00");
 //
 //    }
-    $('.SessionTime').html($("#SessionTime").find(":selected").val());
+    if($("#SessionTime").find(":selected").val()=="18:00-19:00"){
+        $('.SessionTime').html("17:00-18:00");
+    }
+    else{
+        $('.SessionTime').html($("#SessionTime").find(":selected").val());
+    } 
     $('.SessionPlace').html($("#SessionPlace").find(":selected").val());
     
     $('.A1Name').html(ab0[0]);
