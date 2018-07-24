@@ -88,8 +88,15 @@ function setSessionDropDown(){
             else if(num<0){
                 num = 0;
             }
-//            $("#SessionTime>option:nth-child("+(idx+1)+") ").text($("#SessionTime>option:nth-child("+(idx+1)+")").val()+" 剩餘"+num+"人");
-            $("#SessionTime>option:nth-child("+(idx+1)+")>span").text(num);
+            var timeStr =$("#SessionTime>option:nth-child("+(idx+1)+")").val();
+            if(timeStr=="18:00-19:00"){
+                $("#SessionTime>option:nth-child("+(idx+1)+") ").text("17:00-18:00"+" 剩餘"+num+"人");
+            }
+            else{
+                $("#SessionTime>option:nth-child("+(idx+1)+") ").text(timeStr+" 剩餘"+num+"人");
+            }
+            
+//            $("#SessionTime>option:nth-child("+(idx+1)+")>span").text(num);
         })
     }
 //    
