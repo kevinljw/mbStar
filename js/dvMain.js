@@ -88,7 +88,8 @@ function setSessionDropDown(){
             else if(num<0){
                 num = 0;
             }
-            $("#SessionTime>option:nth-child("+(idx+1)+")").text($("#SessionTime>option:nth-child("+(idx+1)+")").val()+" 剩餘"+num+"人");
+//            $("#SessionTime>option:nth-child("+(idx+1)+") ").text($("#SessionTime>option:nth-child("+(idx+1)+")").val()+" 剩餘"+num+"人");
+            $("#SessionTime>option:nth-child("+(idx+1)+")>span").text(num);
         })
     }
 //    
