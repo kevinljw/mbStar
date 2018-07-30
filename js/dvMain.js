@@ -296,7 +296,7 @@ function evt() {
 //            $('.btn-submit').removeClass("btn-submit");
 //            
             $.ajax({
-                url: (isDebugMode?'//localhost:3000':'//mbstarmonster.ml')+'/api/newPost',
+                url: (isDebugMode?'//localhost:3000':'//139.162.127.121')+'/api/newPost',
                 type: "POST",
                 data: $("#benzForm").serializeArray(),
                 dataType: "json",
