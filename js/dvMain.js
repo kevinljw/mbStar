@@ -59,7 +59,7 @@ function init() {
 var isDebugMode = false;
 function getRemains(){
     $.ajax({
-         url: (isDebugMode?'//localhost:3000':'//mbstarmonster.ml')+'/api/remains',
+         url: (isDebugMode?'//localhost:3000':'//139.162.127.121')+'/api/remains',
         type: "GET",
         dataType: "json",
         jsonpCallback: "result",
